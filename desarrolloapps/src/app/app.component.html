@@ -1,0 +1,30 @@
+<div style="padding: 40px; font-family: sans-serif; max-width: 400px;">
+  <h1>Mis Tareas</h1>
+
+  <div style="margin-bottom: 20px;">
+    <input 
+      type="text" 
+      [(ngModel)]="nuevaTarea" 
+      placeholder="Escribe una nueva tarea..."
+      style="padding: 8px; width: 70%;">
+    
+    <button (click)="agregarTarea()" style="padding: 8px; cursor: pointer;">
+      Añadir
+    </button>
+  </div>
+
+  <hr>
+
+  <ul>
+    @for (tarea of listaTareas; track $index) {
+      <li style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+        {{ tarea }}
+        <button (click)="borrarTarea($index)" style="color: red; border: none; background: none; cursor: pointer;">
+          Eliminar
+        </button>
+      </li>
+    } @empty {
+      <p style="color: gray;">No hay tareas pendientes. ¡Buen trabajo!</p>
+    }
+  </ul>
+</div>
