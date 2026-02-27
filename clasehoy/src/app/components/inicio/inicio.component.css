@@ -1,20 +1,20 @@
 .contenedor-principal {
   display: flex;
-  flex-wrap: wrap; /* Para que si no caben, bajen a la siguiente fila */
-  gap: 20px;       /* Espacio entre tarjetas */
+  flex-wrap: wrap; 
+  gap: 20px;       
   justify-content: center;
   padding: 20px;
 }
 
 .card {
-  width: 200px;    /* Ancho de cada columna de tu dibujo */
+  width: 200px;    
   display: flex;
   flex-direction: column;
 }
 
 .foto-container {
-  border: 2px solid #000; /* Borde negro como el de tu dibujo */
-  height: 200px;          /* Cuadro grande */
+  border: 2px solid #000; 
+  height: 200px;          
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,9 +28,9 @@
 
 .descripcion-container {
   border: 2px solid #000;
-  border-top: none;       /* Para que no se vea doble borde en medio */
-  height: 80px;           /* Cuadro pequeño de abajo */
+  border-top: none;       
+  height: 80px;           
   padding: 10px;
-  overflow-y: auto;       /* Por si la descripción es muy larga */
+  overflow-y: auto;       
   font-size: 14px;
 }

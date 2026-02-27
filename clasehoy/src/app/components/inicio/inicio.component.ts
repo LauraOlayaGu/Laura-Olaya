@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser, CommonModule } from '@angular/common'; // Asegúrate de importar esto
+import { isPlatformBrowser, CommonModule } from '@angular/common'; 
 import { DatosService } from '../../services/datos.service';
 
 @Component({
@@ -14,11 +14,11 @@ export class InicioComponent implements OnInit {
 
   constructor(
     private pokeService: DatosService,
-    @Inject(PLATFORM_ID) private platformId: Object // Esto identifica si es el navegador
+    @Inject(PLATFORM_ID) private platformId: Object 
   ) {}
 
   ngOnInit() {
-    // Solo cargamos los datos si estamos en el navegador
+    
     if (isPlatformBrowser(this.platformId)) {
       this.obtenerDatos();
     }
