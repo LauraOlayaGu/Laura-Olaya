@@ -1,0 +1,21 @@
+<div class="detalle-container">
+  <button class="btn-volver" routerLink="/catalogo">← Volver al inicio</button>
+
+  <div class="contenido-detalle" *ngIf="pelicula">
+    <div class="poster-detalle">
+      <img [src]="pelicula.img" [alt]="pelicula.nombre">
+    </div>
+
+    <div class="info-detalle">
+      <h1 class="titulo-pelicula">{{pelicula.nombre}}</h1>
+      
+      <p class="descripcion-texto">
+        {{pelicula.descripcion}}
+      </p>
+      
+      <button class="btn-guardar" (click)="guardar()">
+        + GUARDAR EN MI LISTA
+      </button>
+    </div>
+  </div>
+</div>
